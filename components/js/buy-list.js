@@ -8,7 +8,7 @@ define(function(){
 		created:function(){
 			var _this=this;
 			$.ajax({
-				url:"/json/buy.json",
+				url:"/car/json/buy.json",
 				dataType:"json",
 				success:function(json){
 					_this.listArr=json;
