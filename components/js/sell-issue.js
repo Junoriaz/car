@@ -70,7 +70,7 @@ define(function(){
 			var _this=this;
 			$.ajax({
 				type:"get",
-				url:"/json/brand.json",
+				url:"/car/json/brand.json",
 				dataType:"json",
 				async:true,
 				success:function(json){
@@ -82,7 +82,7 @@ define(function(){
 			});
 			$.ajax({
 				type:"get",
-				url:"/json/outcolor.json",
+				url:"/car/json/outcolor.json",
 				dataType:"json",
 				async:true,
 				success:function(json){
@@ -95,7 +95,7 @@ define(function(){
 			
 			$.ajax({
 				type:"get",
-				url:"/json/incolor.json",
+				url:"/car/json/incolor.json",
 				dataType:"json",
 				async:true,
 				success:function(json){
@@ -107,7 +107,7 @@ define(function(){
 			});
 			$.ajax({
 				type:"get",
-				url:"/json/typelist.json",
+				url:"/car/json/typelist.json",
 				dataType:"json",
 				async:true,
 				success:function(json){
@@ -120,7 +120,7 @@ define(function(){
 			
 			$.ajax({
 				type:"get",
-				url:"/json/prise.json",
+				url:"/car/json/prise.json",
 				dataType:"json",
 				async:true,
 				success:function(json){
