@@ -1,0 +1,23 @@
+[
+		{
+			"toUrl":"/buy/detail",
+			"imgUrl":"img/0.jpg",
+			"name":"标题1",
+			"area":"北京",
+			"payment":"全款"
+		},
+		{
+			"toUrl":"/buy/detail",
+			"imgUrl":"img/0.jpg",
+			"name":"标题2",
+			"area":"北京",
+			"payment":"全款"
+		},
+		{
+			"toUrl":"/buy/detail",
+			"imgUrl":"img/0.jpg",
+			"name":"标题3",
+			"area":"北京",
+			"payment":"全款"
+		}
+	]
