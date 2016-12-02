@@ -24,7 +24,7 @@ define(function(){
 				typeArr:[],
 				navBool:false,
 				conditionStr:""
-r			}
+			}
 		},
 		methods:{
 			showFix:function(index){
@@ -34,7 +34,7 @@ r			}
 				for(var i=0;i<_this.filterArr.length;i++ ){
 					if(i!=index){
 						_this.filterArr[i].fixBool=false;
-a					}
+					}
 				}
 			},
 			hideFix:function(e){
@@ -44,7 +44,7 @@ a					}
 				_this.navBool=false;
 			},
 			conditionFun:function($event,carName,seriesName,brandName){
-c				$event.stopPropagation();
+				$event.stopPropagation();
 				var _this=this;
 				_this.conditionStr=brandName+" "+seriesName+" "+carName;
 			},
@@ -54,7 +54,7 @@ c				$event.stopPropagation();
 				$.ajax({
 					type:"get",
 					url:"/car/json/sell.json",
-/					dataType:"json",
+					dataType:"json",
 					data:{data:data},
 					async:true,
 					success:function(json){
