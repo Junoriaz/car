@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<script src="js/plugins/fontAuto.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+	</head>
+	<body>
+		<div id="app" v-cloak>
+			<router-view name='templateOne'></router-view>
+			<router-view name='templateTwo'></router-view>
+			<router-view name='templateThree'></router-view>
+			<router-view name='templateFour'></router-view>
+			<router-view name='templateFive'></router-view>
+		</div>
+		<script src="js/libs/sea.js"></script>
+		<script src="js/libs/vue.js"></script>
+		<script src="js/libs/zepto.min.js"></script>
+		<script src="js/plugins/vue-router.js"></script>
+		<script>
+			seajs.config({
+				preload:['/js/plugins/seajs-text'],
+				paths:{
+					"tpl":"/components/template"
+				},
+				base:"/components/"
+			});
+			seajs.use("/js/app");
+		</script>
+	</body>
+</html>
