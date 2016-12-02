@@ -42,7 +42,7 @@ define(function(){
 		created:function(){
 			var _this=this;
 			$.ajax({
-				url:"/json/mysell.json",
+				url:"/car/json/mysell.json",
 				dataType:"json",
 				success:function(json){
 					_this.listArr=json;
