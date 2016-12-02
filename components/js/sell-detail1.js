@@ -9,7 +9,7 @@ define(function(){
 			console.log(2);
 			var _this=this;
 			$.ajax({
-				url:"/json/selldetial1.json",
+				url:"/car/json/selldetial1.json",
 				dataType:"json",
 				success:function(json){
 					console.log(json);
