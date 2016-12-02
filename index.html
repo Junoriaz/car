@@ -21,13 +21,13 @@
 		<script src="js/plugins/vue-router.js"></script>
 		<script>
 			seajs.config({
-				preload:['./js/plugins/seajs-text'],
+				preload:['../car/js/plugins/seajs-text'],
 				paths:{
-					"tpl":"./components/template"
+					"tpl":"/car/components/template"
 				},
-				base:"./components/"
+				base:"/car/components/"
 			});
-			seajs.use("./js/app");
+			seajs.use("/car/js/app");
 		</script>
 	</body>
 </html>
