@@ -1,0 +1,10 @@
+define(function(){
+	return{
+		data:function(){
+			return{
+				name:"李卫敏",
+				company:"广东星会奔驰有限公司"
+			}
+		}
+	}
+});

@@ -1,0 +1,9 @@
+define(function(){
+	return{
+		data:function(){
+			return{
+				imgUrl:"img/1.jpg"
+			}
+		}
+	}
+});

@@ -1,0 +1,155 @@
+define(function(){
+	return{
+		data:function(){
+			return{
+			cartypeArr:[
+				{
+					name:"标题",
+					now:"品牌 车系 车型",
+					fixBool:false
+				},
+				{
+					name:"年份",
+					now:"年份",
+					fixBool:false
+				},
+				{
+					name:"外色",
+					now:"白色",
+					fixBool:false
+				},
+				{
+					name:"内色",
+					now:"黑色",
+					fixBool:false
+				}
+			],
+			cartype2Arr:[
+						{
+							name:"卖到哪里",
+							now:"北京",
+							fixBool:false
+						},
+						{
+							name:"状态",
+							now:"全款",
+							fixBool:false
+						}
+			],
+			handwrite:"配置 需要手动填写",
+			brandArr:[],
+			dateArr:[],
+			outColorArr:[],
+			inColorArr:[],
+			areaArr:[],
+			paymentArr:[],
+			navBool:false
+			}
+		},
+		methods:{
+			showFix:function(Arr,index){
+				console.time("a");
+				var _this=this;
+				_this.navBool=true;
+				Arr[index].fixBool=true;
+				console.log(_this.cartypeArr.length,_this.cartype2Arr.length,index)
+				for(var i=0;i<_this.cartypeArr.length;i++ ){
+					if(i!=index){
+					_this.cartypeArr[i].fixBool=false;
+					}
+				}
+				for(var j=0;j<_this.cartype2Arr.length;j++ ){
+					if(j!=index){
+					_this.cartype2Arr[j].fixBool=false;
+					}
+				}
+				console.timeEnd("a");
+			},
+			hideFix:function(e){
+				var _this=this;
+				var target=e.target;
+				if(target.id=='Js-fix')
+				_this.navBool=false;
+			}
+		},
+		created:function(){
+			var _this=this;
+			$.ajax({
+				type:"get",
+				url:"/json/brand.json",
+				dataType:"json",
+				async:true,
+				success:function(json){
+					_this.brandArr=json;
+				},
+				error:function(xml,status,error){
+					console.log(xml,status,error)
+				}
+			});
+			
+			$.ajax({
+				type:"get",
+				url:"/json/date.json",
+				dataType:"json",
+				async:true,
+				success:function(json){
+					_this.dateArr=json;
+				},
+				error:function(xml,status,error){
+					console.log(xml,status,error)
+				}
+			});
+			
+			$.ajax({
+				type:"get",
+				url:"/json/outcolor.json",
+				dataType:"json",
+				async:true,
+				success:function(json){
+					_this.outColorArr=json;
+				},
+				error:function(xml,status,error){
+					console.log(xml,status,error)
+				}
+			});
+			
+			$.ajax({
+				type:"get",
+				url:"/json/incolor.json",
+				dataType:"json",
+				async:true,
+				success:function(json){
+					_this.inColorArr=json;
+				},
+				error:function(xml,status,error){
+					console.log(xml,status,error)
+				}
+			});
+			
+			$.ajax({
+				type:"get",
+				url:"/json/area.json",
+				dataType:"json",
+				async:true,
+				success:function(json){
+					_this.areaArr=json;
+				},
+				error:function(xml,status,error){
+					console.log(xml,status,error)
+				}
+			});
+			$.ajax({
+				type:"get",
+				url:"/json/payment.json",
+				dataType:"json",
+				async:true,
+				success:function(json){
+					_this.paymentArr=json;
+				},
+				error:function(xml,status,error){
+					console.log(xml,status,error)
+				}
+			});
+		}
+	}
+});

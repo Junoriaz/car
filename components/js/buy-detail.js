@@ -1,0 +1,22 @@
+define(function(){
+	return{
+		data:function(){
+			return{
+			message:{}
+			}
+		},
+		created:function(){
+			var _this=this;
+			$.ajax({
+				url:"/json/buydetail.json",
+				dataType:"json",
+				success:function(json){
+					_this.message=json;
+				},
+				error:function(xml,status,error){
+					console.log(xml,status,error);
+				}
+			});
+		}
+	}
+});

@@ -1,0 +1,9 @@
+define(function(){
+	return{
+		data:function(){
+			return{
+				href:"/sell_publish"
+			}
+		}
+	}
+});

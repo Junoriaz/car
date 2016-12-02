@@ -1,0 +1,11 @@
+define(function(){
+	return{
+		data:function(){
+			return{
+				id:"indexTel",
+				tel:"tel:",
+				telNum:"4006070751"
+			}
+		}
+	}
+});
