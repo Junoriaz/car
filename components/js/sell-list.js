@@ -17,7 +17,7 @@ define(function(require,exports,module){
 		created:function(){
 			var _this=this;
 			$.ajax({
-				url:"/json/sell.json",
+				url:"/car/json/sell.json",
 				dataTYpe:"json",
 				success:function(json){
 					_this.listArr=json;
@@ -33,7 +33,7 @@ define(function(require,exports,module){
 				if(document.smeFun==null){
 					_this.touchFun(function(num){
 						$.ajax({
-							url:"/json/sell.json",
+							url:"/car/json/sell.json",
 							data:{pageNum:num},
 							dataType:"json",
 							success:function(json){
