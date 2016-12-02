@@ -1,5 +1,5 @@
 define(function(require,exports,module){
-	var touchMore=require("/js/touchMore.js");
+	var touchMore=require("/car/js/touchMore.js");
 	return{
 		data:function(){
 			return{
