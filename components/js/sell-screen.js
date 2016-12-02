@@ -24,7 +24,7 @@ define(function(){
 				typeArr:[],
 				navBool:false,
 				conditionStr:""
-			}
+r			}
 		},
 		methods:{
 			showFix:function(index){
@@ -34,7 +34,7 @@ define(function(){
 				for(var i=0;i<_this.filterArr.length;i++ ){
 					if(i!=index){
 						_this.filterArr[i].fixBool=false;
-					}
+a					}
 				}
 			},
 			hideFix:function(e){
@@ -44,7 +44,7 @@ define(function(){
 				_this.navBool=false;
 			},
 			conditionFun:function($event,carName,seriesName,brandName){
-				$event.stopPropagation();
+c				$event.stopPropagation();
 				var _this=this;
 				_this.conditionStr=brandName+" "+seriesName+" "+carName;
 			},
@@ -53,8 +53,8 @@ define(function(){
 				var data=_this.conditionStr;
 				$.ajax({
 					type:"get",
-					url:"/json/sell.json",
-					dataType:"json",
+					url:"/car/json/sell.json",
+/					dataType:"json",
 					data:{data:data},
 					async:true,
 					success:function(json){
@@ -72,7 +72,7 @@ define(function(){
 			var _this=this;
 			$.ajax({
 				type:"get",
-				url:"/json/brand.json",
+				url:"/car/json/brand.json",
 				dataType:"json",
 				async:true,
 				success:function(json){
@@ -85,7 +85,7 @@ define(function(){
 		
 			$.ajax({
 				type:"get",
-				url:"/json/screen.json",
+				url:"/car/json/screen.json",
 				dataType:"json",
 				async:true,
 				success:function(json){
@@ -97,7 +97,7 @@ define(function(){
 			});
 			$.ajax({
 				type:"get",
-				url:"/json/type.json",
+				url:"/car/json/type.json",
 				dataType:"json",
 				async:true,
 				success:function(json){
