@@ -4,7 +4,7 @@ define(function(require,exports,module){
 	var buy=require('buy.js');
 	var mySell=require('mySell.js');
 	var myBuy=require('myBuy.js');
-	var buyAndSell=require('buyAndSell.js');
+	var buyAndSell=require('buyandsell.js');
 	var selldetail1=require('sell-detail1.js');
 	var buydetail=require('buy-detail.js');
 	var sellIssue=require('sell-issue.js');
